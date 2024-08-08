@@ -83,3 +83,20 @@ function unusualFive() {
 function setAlarm(emp, vac) {
   return emp == true && vac == false ? true : false;
 }
+
+function shorter_reverse_longer(a, b) {
+
+  return (a.length >= b.length) ?
+    `${b}${a.split('').reverse().join('')}${b}`
+    :
+    `${a}${b.split('').reverse().join('')}${a}`
+}
+
+var replaceDots = function(str) {
+  let cut = str.split('');
+  return cut.map(a => a.replace('.','-')).join('')
+
+}
+// replaceDots("one.two.three")
+
+const grow = (x) => x.reduce((acc, cv)=> acc * cv)
