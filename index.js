@@ -853,6 +853,427 @@ function highAndLow(numbers){
 }
 
 
+function booleanToString(b){
+	if (b == true){
+		return 'true';
+	} else if (b == false){
+		return 'false';
+	}
+}
+
+// or
+
+function booleanToString(b){
+	return b == true ? "true" : "false";
+}
+
+
+
+
+function litres(time) {
+	return parseInt(time * 0.5);
+}
+
+
+function century(year) {
+	var answer = (year - 1) / 100;
+	return parseInt(answer) + 1;
+}
+
+
+function digitize(n) {
+	var arr = n.toString().split('').reverse().map(Number);
+	return arr;
+}
+
+
+function sum(numbers){
+	var sum_a = 0;
+	for (var n = 0; n < numbers.length; n++){
+		sum_a += numbers[n]
+	}
+	return sum_a;
+};
+
+
+function lovefunc(flower1, flower2){
+	if ((flower1 % 2 == 0 && flower2 % 2 != 0) || (flower2 % 2 == 0 && flower1 % 2 != 0)){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+// or
+
+function lovefunc(flower1, flower2){
+	return (flower1 + flower2) % 2 != 0;
+}
+
+
+
+function past(h, m, s){
+	return (h * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000);
+}
+
+
+function makeUpperCase(str) {
+	return str.toUpperCase();
+}
+
+
+function simpleMultiplication(number) {
+	if (number % 2 == 0){
+		return number * 8;
+	} else {
+		return number * 9;
+	}
+}
+
+
+
+function bmi(weight, height) {
+	var bmi = weight / height**2;
+	if (bmi <= 18.5){
+		return "Underweight";
+	} else if (bmi <= 25.0){
+		return "Normal";
+	} else if (bmi <= 30.0){
+		return "Overweight";
+	} else {
+		return "Obese";
+	}
+}
+
+
+
+var min = function(list){
+    return Math.min(...list);
+}
+
+var max = function(list){
+    return Math.max(...list);
+}
+
+
+
+function check(a, x){
+	return a.includes(x);
+}
+
+
+
+function stringToArray(string){
+	return string.split(' ');
+}
+
+
+
+function reverseSeq(n){
+	var arr = [];
+	for (let i = n; i > 0; i--){
+		arr.push(i);
+	}
+	return arr;
+}
+
+
+function greet (name, owner) {
+	return name == owner ? 'Hello boss' : 'Hello guest';
+}
+
+function getGrade (s1, s2, s3) {
+	if ((s1 + s2 + s3) / 3 >= 90 && (s1 + s2 + s3) / 3 <= 100){
+		return "A";
+	} else if ((s1 + s2 + s3) / 3 >= 80 && (s1 + s2 + s3) / 3 < 90){
+		return "B";
+	} else if ((s1 + s2 + s3) / 3 >= 70 && (s1 + s2 + s3) / 3 < 80){
+		return "C";
+	} else if ((s1 + s2 + s3) / 3 >= 60 && (s1 + s2 + s3) / 3 < 70){
+		return "D";
+	} else {
+		return "F";
+	}
+}
+
+
+function greet(name){
+	if(name === "Johnny"){
+		return "Hello, my love!";
+	} else {
+		return "Hello, " + name + "!";
+	}
+}
+
+
+
+class Kata {
+	static getVolumeOfCuboid(length, width, height) {
+		return(length * width * height);
+	}
+}
+
+
+
+function updateLight(current) {
+	switch(current){
+		case ('green'): return ('yellow');
+		case ('yellow') : return ('red');
+		case ('red') : return ('green');
+	}
+}
+
+
+
+function otherAngle(a, b) {
+	return 180 - (a + b);
+}
+
+
+const areaOrPerimeter = function(l , w){
+	if (l == w){
+		return l * w;
+	} else {
+		return 2*l + 2*w;
+	}
+};
+
+
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+	return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
+}
+
+
+
+function doubleChar(str) {
+	return str.replace(/./g, '$&$&')
+}
+
+
+
+function getAge(age){
+	return parseInt(age[0]);
+}
+
+
+
+function reverseWords(str){
+	return str.split(" ").reverse().join(" ");
+}
+
+
+function hoopCount (n) {
+	let hope = "Keep at it until you get it";
+	let hoop = "Great, now move on to tricks";
+	if (n < 10){
+		return hope;
+	} else {
+		return hoop;
+	}
+}
+
+
+
+function switchItUp(number){
+	var words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+	return words[number];
+}
+
+
+
+function square(n){
+	return n*n;
+}
+
+
+
+function strCount(str, letter){  
+	return str.split(letter).length - 1;
+}
+
+
+
+function getPlanetName(id){
+	switch(id){
+		case (1): return ('Mercury');
+		case (2) : return ('Venus');
+		case (3) : return ('Earth');
+		case (4) : return ('Mars');
+		case (5) : return ('Jupiter');
+		case (6) : return ('Saturn');
+		case (7) : return ('Uranus');
+		case (8) : return ('Neptune');
+	}
+};
+
+
+
+function firstNonConsecutive (arr) {
+	for (let i = 0; i < arr.length - 1; i++){
+		if (arr[i] + 1 != arr[i + 1]){
+			return arr[i + 1];
+		}
+	}
+	return null;
+}
+
+
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+	let catYears1 = 15;
+	let catYears2 = catYears1 + 9;
+	let catYears3 = catYears2 + (humanYears - 2) * 4;
+	let dogYears1 = 15;
+	let dogYears2 = dogYears1 + 9;
+	let dogYears3 = dogYears2 + (humanYears - 2) * 5;
+	if (humanYears == 0){
+		return [0, 0, 0];
+	}
+	if (humanYears == 1){
+		return [humanYears, catYears1, dogYears1];
+	}
+	if (humanYears == 2){
+		return [humanYears, catYears2, dogYears2];
+	}
+	if (humanYears > 2){
+		return [humanYears, catYears3, dogYears3];
+	}
+}
+
+
+
+
+function correct(string){
+	return string.replace(/5/g,"S").replace(/0/g,"O").replace(/1/g,"I");
+}
+
+
+
+function expressionMatter(a, b, c) {
+	var combinations = [
+		a + b + c,
+		a * (b + c), 
+		a * b * c, 
+		(a + b) * c,
+		a * b + c,
+	];
+	return Math.max.apply(null, combinations);
+}
+
+
+
+function greet(language) {
+	var welcome = {'english': 'Welcome',
+				   'czech': 'Vitejte', 
+				   'danish': 'Velkomst',
+				   'dutch': 'Welkom',
+				   'estonian': 'Tere tulemast',
+				   'finnish': 'Tervetuloa',
+				   'flemish': 'Welgekomen',
+				   'french': 'Bienvenue',
+				   'german': 'Willkommen',
+				   'irish': 'Failte',
+				   'italian': 'Benvenuto',
+				   'latvian': 'Gaidits',
+				   'lithuanian': 'Laukiamas',
+				   'polish': 'Witamy',
+				   'spanish': 'Bienvenido',
+				   'swedish': 'Valkommen',
+				   'welsh': 'Croeso',
+				};
+	return welcome[language] || 'Welcome';
+}
+
+
+function reverseList(l){
+	return l.reverse((a, b) => b - a);
+}
+
+// or
+
+function reverseList(l){
+	return l.reverse();
+}
+
+
+
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+
+
+function twoSort(array) {
+	var arr = array.sort();
+	return arr[0].split("").join("***");
+}
+
+
+
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
+
+
+
+function shortcut (s) {
+	return s.replace(/[aeiou]/gi, '');
+}
+
+
+
+function peopleWithAgeDrink(old) {
+	if (old < 14){
+		return "drink toddy";
+	} else if (old >= 14 && old < 18){
+		return "drink coke";
+	} else if (old >= 18 && old < 21){
+		return "drink beer";
+	} else {
+		return "drink whisky";
+	}
+}
+
+
+
+function createArray(number){
+	var newArray = [];
+	for(var counter = 1; counter <= number;){
+		newArray.push(counter);
+		counter ++;
+	}
+	return newArray;
+}
+
+
+
+function getChar(c){
+	return String.fromCharCode(c);
+}
+
+
+
+
+function gooseFilter (birds) {
+	var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+	return birds.filter(i => !geese.includes(i));
+};
+
+
+
+function nameShuffler(name){
+	var arr = name.split(" ");
+	return arr[1] + " " + arr[0];
+}
+
+// or
+
+function nameShuffler(name){
+	return name.split(" ").reverse().join(" ");
+}
+
 
 
 function getCount(str){
